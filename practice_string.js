@@ -7,7 +7,7 @@ function myCheck(i) {
     console.log(false);
   }
 }
-// myCheck('manh cuong');
+myCheck("manh cuong");
 // 2. Write a JavaScript function to check whether a string is blank or not
 function isBlank(i) {
   if (i == "") {
@@ -16,21 +16,21 @@ function isBlank(i) {
     console.log(false);
   }
 }
-// isBlank('');
+isBlank("");
 // 3. Write a JavaScript function to split a string and convert it into an array of words
 function stringToArray(i) {
   const trimStr = i.trim();
   const result = trimStr.split(" ");
   console.log(result);
 }
-// stringToArray('Manh Cuong');
+stringToArray("Manh Cuong");
 // 4. Write a JavaScript function to extract a specified number of characters from a string
 function truncateString(i, index) {
   const trimStr = i.trim();
   const sliceStr = trimStr.slice(0, index);
   console.log(sliceStr);
 }
-// truncateString('Manh Cuong', 4);
+truncateString("Manh Cuong", 4);
 // 5.Write a JavaScript function to convert a string in abbreviated form
 function abbrevName(i) {
   const trimStr = i.trim();
@@ -40,7 +40,7 @@ function abbrevName(i) {
     console.log(result);
   }
 }
-// abbrevName('Manh Cuong');
+abbrevName("Manh Cuong");
 // 6.Write a JavaScript function to hide email addresses to protect from unauthorized user
 function protectEmai(i) {
   const trimStr = i.trim();
@@ -52,7 +52,7 @@ function protectEmai(i) {
     console.log(hideChar);
   }
 }
-// protectEmai('manhcuong@gmail.com');
+protectEmai("manhcuong@gmail.com");
 // 7. Write a JavaScript function to parameterize a string
 function stringParameterize(i) {
   const trimStr = i.trim();
@@ -68,7 +68,7 @@ function stringParameterize(i) {
     console.log(addChar);
   }
 }
-// stringParameterize("Robin Singh from USA.");
+stringParameterize("Robin Singh from USA.");
 // 8. Write a JavaScript function to capitalize the first letter of a string
 function capitalize(i) {
   const trimStr = i.trim();
@@ -77,7 +77,7 @@ function capitalize(i) {
   const result = trimStr.replace(findChar, convertCharToUpper);
   console.log(result);
 }
-// capitalize("js string exercises");
+capitalize("js string exercises");
 // 9. Write a JavaScript function to capitalize the first letter of each word in a string
 function capitalizeWord(i) {
   const trimStr = i.trim();
@@ -94,7 +94,7 @@ function capitalizeWord(i) {
     console.log(trimResult);
   }
 }
-// capitalizeWord("js string exercises");
+capitalizeWord("js string exercises");
 // 10. Write a JavaScript function that takes a string which has lower and upper case letters as a parameter and converts upper case letters to lower case, and lower case letters to upper case
 function swapcase(i) {
   const trimStr = i.trim();
