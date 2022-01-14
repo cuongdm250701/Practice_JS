@@ -113,3 +113,22 @@ function swapcase(i) {
   }
 }
 swapcase("AaBbc");
+// 11. Write a JavaScript function to convert a string into camel case
+function camelize(i) {
+  const trimStr = i.trim();
+  const spiltStr = trimStr.split(" ");
+  let result = "";
+  if (spiltStr.length > 1) {
+    for (let i = 0; i < spiltStr.length; i++) {
+      const findChar = spiltStr[i].charAt(0);
+      const upperCase = findChar.toUpperCase();
+      const replaceChar = spiltStr[i].replace(findChar, upperCase);
+      result += replaceChar;
+    }
+  }
+  if (spiltStr.length == 1) {
+    result += i;
+  }
+  console.log(result);
+}
+camelize("JavaScriptExercises");
