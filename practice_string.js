@@ -132,3 +132,53 @@ function camelize(i) {
   console.log(result);
 }
 camelize("JavaScriptExercises");
+// 12. Write a JavaScript function to uncamelize a string
+function uncamelize(i1, i2) {
+  const trimStr = i1.trim();
+  const splitStr = trimStr.split("");
+  if (!i2) {
+    i2 = " ";
+  }
+  let result = "";
+  for (let i = 0; i < splitStr.length; i++) {
+    let temp = splitStr[i];
+    if (temp === splitStr[i].toUpperCase()) {
+      temp = i2 + splitStr[i].toLowerCase();
+    }
+    result += temp;
+  }
+  console.log(result);
+}
+uncamelize("helloWorld", "-");
+// 13. Write a JavaScript function to concatenates a given string n times (default is 1)
+function repeat(i1, i2) {
+  let result = "";
+  result = i1.trim();
+  if (i2) {
+    for (let i = 1; i < i2; i++) {
+      result += i1;
+    }
+  }
+  console.log(result);
+}
+repeat("Ha!", 3);
+
+// 14. Write a JavaScript function to insert a string within a string at a particular position (default is 1)
+function insert(i1, i2, i3) {
+  const trimStr = i1;
+  let result = "";
+  if (!i2) {
+    result += trimStr;
+  }
+  if (i2 && !i3) {
+    result += i2 + trimStr;
+  }
+  if (i3) {
+    const lengthStr = trimStr.length;
+    const silceString = trimStr.slice(0, i3);
+    const sliceStrEnd = trimStr.slice(i3, lengthStr);
+    result += silceString + i2 + sliceStrEnd;
+  }
+  console.log(result);
+}
+insert("We are doing some exercises.", "JavaScript ", 18);
