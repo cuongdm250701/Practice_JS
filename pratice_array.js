@@ -154,3 +154,99 @@ arrayTest([
   [7, 4, 28, 14],
   [3, 10, 26, 7],
 ]);
+
+// 11. Write a JavaScript program to find the sum of squares of a numeric vector.
+sumSquares = (array) => {
+  if (Array.isArray(array)) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      const ex = array[i] ** array[i];
+      sum += ex;
+    }
+    console.log(sum);
+  }
+};
+
+sumSquares([1, 2, 3, 4]);
+
+// 12. Write a JavaScript program to compute the sum and product of an array of integers.
+
+sumAndMultilple = (array) => {
+  if (Array.isArray(array)) {
+    let sum = 0;
+    let multi = 1;
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i];
+      multi *= array[i];
+    }
+    console.log(sum);
+    console.log(multi);
+  }
+};
+
+sumAndMultilple([1, 2, 3, 4]);
+
+// 14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+removeDuplicateItem = (array) => {
+  if (Array.isArray(array)) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+      if (!newArray.includes(array[i])) {
+        newArray.push(array[i]);
+      }
+    }
+    console.log(newArray);
+  }
+};
+
+removeDuplicateItem([1, 1, 21, 3, 4, 1, 2, 3, 4, 5]);
+
+// 16. Write a JavaScript program to find the leap years in a given range of years.
+getRanageOfYear = (array) => {
+  if (Array.isArray(array)) {
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+      if ((array[i] % 4 == 0 && array[i] % 100 != 0) || array[i] % 400 == 0) {
+        result.push(array[i]);
+      }
+    }
+    console.log(result);
+  }
+};
+getRanageOfYear([2000]);
+
+// 19. There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays.
+
+sumItemArray = (array1, array2) => {
+  let condition;
+  if (Array.isArray(array1) && Array.isArray(array2)) {
+    const lengthArray1 = array1.length;
+    const lengthArray2 = array2.length;
+    condition = lengthArray2 >= lengthArray1 ? lengthArray2 : lengthArray1;
+    let result = [];
+    for (let i = 0; i < condition; i++) {
+      if (array1[i] === undefined || array2[i] === undefined) {
+        result.push(array1[i] === undefined ? array2[i] : array1[i]);
+      } else {
+        result.push(array1[i] + array2[i]);
+      }
+    }
+    console.log(result);
+  }
+};
+sumItemArray([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]);
+
+// 20. Write a JavaScript program to find duplicate values in a JavaScript array.
+findItemDuplicate = (array) => {
+  if (Array.isArray(array)) {
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+      const itemDuplicate = array.filter((item) => item == array[i]);
+      if (itemDuplicate.length > 1) {
+        if (!result.includes(array[i])) result.push(array[i]);
+      }
+    }
+    console.log(result);
+  }
+};
+findItemDuplicate([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]);
