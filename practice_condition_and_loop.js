@@ -90,3 +90,111 @@ chartPain2 = () => {
   console.log(result);
 };
 chartPain2();
+
+chartPain3 = () => {
+  let result = "";
+  for (let i = 5; i >= 1; i--) {
+    for (let j = 1; j <= 5; j++) {
+      if (j < i) {
+        result += " ";
+      } else {
+        result += "*";
+      }
+    }
+    result += "\n";
+  }
+  console.log(result);
+};
+chartPain3();
+
+chartPain4 = () => {
+  let result = "";
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5; j++) {
+      if (j < i) {
+        result += " ";
+      } else {
+        result += "*";
+      }
+    }
+    result += "\n";
+  }
+  console.log(result);
+};
+chartPain4();
+
+chartPain5 = () => {
+  let result = "";
+  let increase = 0;
+  for (let i = 4; i >= 1; i--) {
+    for (let j = 1; j <= 4; j++) {
+      if (j == i) {
+        result += "*";
+        break;
+      } else {
+        result += " ";
+      }
+    }
+    for (let k = 1; k <= increase; k++) {
+      result += "*";
+    }
+    increase += 2;
+    result += "\n";
+  }
+  console.log(result);
+};
+chartPain5();
+
+chartPain6 = () => {
+  let result = "";
+  for (let i = 1; i <= 5; i++) {
+    for (let j = 1; j <= 5; j++) {
+      if (i == 1 || i == 5) {
+        result += "* ";
+      } else if (j == 1 || j == 5) {
+        result += "* ";
+      } else {
+        result += "  ";
+      }
+    }
+    result += "\n";
+  }
+  console.log(result);
+};
+chartPain6();
+
+chartPain7 = () => {
+  let result = "";
+  for (let i = 1; i <= 7; i++) {
+    for (let j = 1; j <= 7; j++) {
+      if (i == 1 || i == 7) {
+        result += "* ";
+      } else if (j == i) {
+        result += "* ";
+      } else {
+        result += "  ";
+      }
+    }
+    result += "\n";
+  }
+  console.log(result);
+};
+chartPain7();
+
+chartPain8 = () => {
+  let result = "";
+  for (let i = 7; i >= 1; i--) {
+    for (let j = 1; j <= 7; j++) {
+      if (i == 7 || i == 1) {
+        result += "* ";
+      } else if (j == i) {
+        result += "* ";
+      } else {
+        result += "  ";
+      }
+    }
+    result += "\n";
+  }
+  console.log(result);
+};
+chartPain8();
