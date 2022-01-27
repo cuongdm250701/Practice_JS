@@ -198,3 +198,110 @@ chartPain8 = () => {
   console.log(result);
 };
 chartPain8();
+
+chartPain9 = () => {
+  let result = "";
+  let increase = 0;
+  for (let i = 1; i <= 4; i++) {
+    for (let j = 1; j <= 7; j++) {
+      if (i == 1) {
+        result += "* ";
+      } else if (j == i || j == 7 - increase) {
+        result += "* ";
+      } else {
+        result += "  ";
+      }
+    }
+    increase += 1;
+
+    result += "\n";
+  }
+  let decrease = 2;
+  for (let i = 3; i >= 1; i--) {
+    for (let j = 1; j <= 7; j++) {
+      if (i == 1) {
+        result += "* ";
+      } else if (j == i || j == 7 - decrease) {
+        result += "* ";
+      } else {
+        result += "  ";
+      }
+    }
+    decrease -= 1;
+    result += "\n";
+  }
+  console.log(result);
+};
+chartPain9();
+
+chartPain10 = () => {
+  let result = "";
+  let increase = 0;
+  for (let i = 1; i <= 4; i++) {
+    for (let j = 1; j <= 7; j++) {
+      if (i == 1) {
+        result += "* ";
+      } else if (j == 1 || j == i || j == 7 - increase || j == 7) {
+        result += "* ";
+      } else {
+        result += "  ";
+      }
+    }
+    result += "\n";
+    increase += 1;
+  }
+  let decrease = 2;
+  for (let i = 3; i >= 1; i--) {
+    for (let j = 1; j <= 7; j++) {
+      if (i == 1) {
+        result += "* ";
+      } else if (j == 1 || j == i || j == 7 - decrease || j == 7) {
+        result += "* ";
+      } else {
+        result += "  ";
+      }
+    }
+    result += "\n";
+    decrease -= 1;
+  }
+  console.log(result);
+};
+chartPain10();
+
+chartPain11 = () => {
+  let result = "";
+  let increase = 0;
+  for (let i = 6; i >= 1; i--) {
+    for (let j = 1; j <= 6; j++) {
+      if (j == i) {
+        result += "* ";
+        break;
+      } else {
+        result += "  ";
+      }
+    }
+    for (let k = 1; k <= increase; k++) {
+      result += "* ";
+    }
+    result += "\n";
+    increase += 2;
+  }
+  decrease = 8; // max (do rong) - 3
+  for (let i = 2; i <= 6; i++) {
+    for (let j = 1; j <= 6; j++) {
+      if (j == i) {
+        result += "* ";
+        break;
+      } else {
+        result += "  ";
+      }
+    }
+    for (let k = 1; k <= decrease; k++) {
+      result += "* ";
+    }
+    result += "\n";
+    decrease -= 2;
+  }
+  console.log(result);
+};
+chartPain11();
