@@ -187,22 +187,18 @@ console.log(rsMap);
 
 // my method myReduce() construction
 
-Array.prototype.myReduce = function (callback, initialValue = undefined) {
+Array.prototype.myReduce = function (callback, initialValue) {
   const arrayLength = this.length;
-  let accumulator;
+  let accumulator = initialValue;
   if (typeof callback === "function") {
-    if (initialValue !== undefined) {
-      accumulator = initialValue;
-      for (let i = 0; i < arrayLength; i++) {
-        accumulator = callback(accumulator, this[i], i);
-      }
-    }
-    if (initialValue === undefined) {
+    let i = 0;
+    if (arguments.length < 2) {
+      i = 1;
       console.log(initialValue);
       accumulator = this[0];
-      for (let i = 1; i < arrayLength; i++) {
-        accumulator = callback(accumulator, this[i], i);
-      }
+    }
+    for (; i < arrayLength; i++) {
+      accumulator = callback(accumulator, this[i], i);
     }
   } else {
     const e = new Error("undefined is not function");
@@ -216,6 +212,6 @@ const rsReduce = reduceArray.myReduce(function (acc, item, index) {
   console.log(item);
   console.log(index);
   return acc + item;
-}, 0);
+}, 1);
 
 console.log(rsReduce);
